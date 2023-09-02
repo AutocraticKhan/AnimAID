@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Animation Data</title>
+</head>
+<body>
+    <h1>Add Animation Data</h1>
+
+    <form method="POST" action="{% url 'add_animation' %}">
+        {% csrf_token %}
+        
+        <label for="mode">Mode:</label>
+        <select name="mode" id="mode">
+            <option value="Mode_1">Center character</option>
+            <option value="Mode_2">Side character</option>
+            <option value="Mode_3">Only Background</option>
+        </select><br>
+
+        <label for="character">Character:</label>
+        <select name="character" id="character">
+            <option value="Character Main">Character Main</option>
+            <option value="Character_2">Character 2</option>
+            <option value="Character_3">Character 3</option>
+        </select><br>
+
+        <label for="dir_head">Direction of Head:</label>
+        <select name="dir_head" id="dir_head">
+            <option value="L">Left</option>
+            <option value="R">Right</option>
+            <option value="M">Middle</option>
+        </select><br>
+
+        <label for="emotion">Emotion:</label>
+        <input type="text" name="emotion" id="emotion" maxlength="10"><br>
+
+        <label for="dir_eye">Direction of Eye:</label>
+        <select name="dir_eye" id="dir_eye">
+            <option value="L">Left</option>
+            <option value="R">Right</option>
+            <option value="M">Middle</option>
+        </select><br>
+
+        <label for="word">Word:</label>
+        <input type="text" name="word" id="word" maxlength="100"><br>
+
+        <label for="body">Body:</label>
+        <input type="text" name="body" id="body" maxlength="100"><br>
+
+        <label for="background">Background:</label>
+        <input type="text" name="background" id="background" maxlength="100"><br>
+
+        <label for="foreground">Foreground:</label>
+        <input type="text" name="foreground" id="foreground" maxlength="100"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
